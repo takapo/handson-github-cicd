@@ -1,5 +1,12 @@
 name: Auto Cancel
-on: pull_request
+on:
+    workflow_dispatch:
+        inputs:
+            greeting:
+                type: string
+                default: Hello
+                required: true
+                description: A cheerful word
 concurrency:
     group: ${{ github.workflow }}-${{ github.ref }}
     cancel-in-progress: true
