@@ -1,0 +1,6 @@
+version: 2
+updates:
+  - pacakge-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: daily
